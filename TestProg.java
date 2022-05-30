@@ -2,26 +2,35 @@ import javax.print.DocFlavor.STRING;
 import java.util.*;
 
 public class TestProg {        
-
     public static void main(String[] args) {
-
-        User user1 = new User("qwerty");
+        Craking cracker = null;
+        User user1;
+        String pass = "";
         
-        System.out.println("taper 1 pour dictionnaire et 2 pour brute force");
+        System.out.print("taper 1 pour dictionnaire et 2 pour brute force:   ");
         Scanner reponse = new Scanner(System.in);
         int rep = reponse.nextInt();
         
 
         if (rep == 1) {
-            Dictionary.passwordTest(user1);
+            cracker = FactoryCraking.getInstance("dico");
+            reponse.nextLine();
+            System.out.print("Entrez le mot de passe: ");
+            pass = reponse.nextLine();
         }
-
-
         else if(rep == 2) {
-            BruteForce.passwordTest2(user1);        
+            cracker = FactoryCraking.getInstance("brutForce");
+            reponse.nextLine();
+            do{
+                System.out.print("Entrez le mot de passe(entre 1 et 6 cqrqcteres): ");
+                pass = reponse.nextLine();
+            }while(pass.length() > 6);     
         }
-        else
-        System.out.println("erreur de saisi");        
+        else{
+            System.out.println("erreur de saisi");
+        }
+        user1 = new User(pass);
+        cracker.passwordTest(user1);
     }
         
 }

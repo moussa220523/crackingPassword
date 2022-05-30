@@ -2,10 +2,10 @@ import java.io.File;
 import java.io.FileNotFoundException;  
 import java.util.Scanner; 
 
-public class Dictionary {
+public class Dictionary extends Craking{
 
 
-    public static void passwordTest( User user) {
+    public void passwordTest(User user) {
         int vu=0;
 
         try {
