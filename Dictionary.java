@@ -13,7 +13,7 @@ public class Dictionary {
             Scanner myReader = new Scanner(myObj);             
             while (myReader.hasNextLine()) {
                 String pw = myReader.nextLine();
-                if(user.authentificate(pw))
+                if(user.authentificate(pw)==true)
                  System.out.println("mot de passe trouvé");
                  vu=1;               
                 }
