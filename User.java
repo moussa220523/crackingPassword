@@ -12,7 +12,7 @@ public class User {
 
     public Boolean authentificate(String pw){
         if (this.password.equals(pw))
-        return true;
-    return false;
+            return true;
+        return false;
     }
 }

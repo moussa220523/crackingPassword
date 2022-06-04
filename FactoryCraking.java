@@ -1,5 +1,5 @@
 public class FactoryCraking{
-    public static Craking getInstance(String method){
+    public static Craking getInstance(Strinting method){
         Craking cracker = null;
 
         if(method.equalsIgnoreCase("brutForce")){

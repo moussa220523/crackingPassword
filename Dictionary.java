@@ -14,7 +14,7 @@ public class Dictionary extends Craking{
             while (myReader.hasNextLine()) {
                 String pw = myReader.nextLine();
 
-                if(user.authentificate(pw)==true){
+                if(user.authentificate(pw)){
                     System.out.println("mot de passe trouvé");
                     vu=1;
                 }               

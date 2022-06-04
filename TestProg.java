@@ -10,7 +10,6 @@ public class TestProg {
         System.out.print("taper 1 pour dictionnaire et 2 pour brute force:   ");
         Scanner reponse = new Scanner(System.in);
         int rep = reponse.nextInt();
-        
 
         if (rep == 1) {
             cracker = FactoryCraking.getInstance("dico");
